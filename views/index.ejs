@@ -4,24 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our cars</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Cars Pepito</h1>
-    </header>
+    <%- include('templates/header') %>
     <main>
       <h2><%= h2 %></h2>
       <section>
         <% result.forEach(vehiculo => { %>
         <div class="card <%= vehiculo.tipo %>">
-          <img src="img/<%= vehiculo.nombre_modelo %>.webp" alt="<%= vehiculo.nombre_modelo %>" />
+          <img
+            src="/img/<%= vehiculo.nombre_modelo %>.webp"
+            alt="<%= vehiculo.nombre_modelo %>"
+          />
           <h3><%= vehiculo.nombre_modelo %></h3>
           <p><%= vehiculo.personas %> personas</p>
           <p><%= vehiculo.puertas %> puertas</p>
-          <p>Cambio: <%= vehiculo.cambio %> </p>
+          <p>Cambio: <%= vehiculo.cambio %></p>
           <p><%= vehiculo.maletas %> maletas</p>
-          <p>Precio/dia: <%= vehiculo.precioDia %>€ </p>
+          <p>Precio/dia: <%= vehiculo.precioDia %>€</p>
           <hr />
           <p><%= vehiculo.tipo %></p>
         </div>

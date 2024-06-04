@@ -1,0 +1,11 @@
+<header>
+    <h1>Cars Pepito</h1>
+    <nav>
+      <ul>
+          <li><a href="/">Inicio</a></li>
+          <% tipos.forEach(tipo => { %>
+              <li><a href="/tipo/<%= tipo.tipo %>"><%= tipo.tipo %></a></li>
+          <% }) %>
+      </ul>
+    </nav>
+  </header>
